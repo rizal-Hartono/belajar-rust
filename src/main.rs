@@ -1,3 +1,5 @@
+use std::backtrace;
+
 fn main() {
     println!("Hello, world!");
 }
@@ -95,3 +97,77 @@ fn augmented_assigmnent(){
     println!("{}", num);
 }
 
+#[test]
+fn boolean(){
+    let a = true;
+    let b: bool = false;
+
+    println!("{} {}", a, b);
+}
+
+#[test]
+fn comparation_operator(){
+    let a = 100;
+    let b = 30;
+    let result = a < b;
+
+    println!("{} {} {}", a, b, result);
+}
+
+#[test]
+fn boolean_operator(){
+    let a = true;
+    let b = true;
+    
+    // AND Operation
+    let result_and = a && b;
+
+    // OR Operation
+    let result_or = a || b;
+
+    let nilai = 75;
+    let batas = 80;
+
+    let nilai_akhir = nilai >= batas; 
+    
+    let lulus = !nilai_akhir && true;
+
+    // OR Operation
+    // let result_not = a ! b;
+
+    println!("{} {} {}", result_and, result_or, lulus);
+}
+
+// jika tipe data ini digunakan lebih dari satu maka tidak akan bisa
+#[test]
+fn char_type(){
+    let char1 = 'a';
+    let char2 = 'b';
+
+    println!("{} {} ", char1, char2);
+}
+
+// seperti array tapi berbeda type data
+#[test]
+fn tuple(){
+    let data: (i32, f64, bool) = (12, 10.5, true);
+
+    println!("{:?} ",data);
+
+// memanggil data berdasarkan urutan dimulai dari 0, seperti array pengggunaannnya
+    // let a = data.0;
+    // println!("Data ke {}", a);
+
+// defraktor tuple
+    // let (b, c, _) = data;
+    // println!("{} {} {}", b, c, a);
+
+// mutable data
+data.0 = 10;
+data.1 = 3.14;
+data.2 = false;
+
+println!("{:?} ",data);
+// menit 1:31:35
+
+}
